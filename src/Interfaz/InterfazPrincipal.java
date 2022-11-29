@@ -43,21 +43,23 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         jLabel3.setText("Programa realizado por: Victor David Nivelo Yaguana");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, -1, -1));
 
+        btnIngresarAlSistema.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnIngresarAlSistema.setText("INGRESAR AL PROGRAMA");
         btnIngresarAlSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarAlSistemaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnIngresarAlSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 180, -1));
+        jPanel1.add(btnIngresarAlSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 270, -1));
 
+        btnSalirDelSistema.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalirDelSistema.setText("SALIR DEL PROGRAMA");
         btnSalirDelSistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirDelSistemaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSalirDelSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 180, -1));
+        jPanel1.add(btnSalirDelSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 270, -1));
 
         FondoDeInterfaz.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FondoDeInterfaz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FONDOS/FondoFinal.jpg"))); // NOI18N

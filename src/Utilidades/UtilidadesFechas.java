@@ -41,14 +41,31 @@ public class  UtilidadesFechas extends Interfaz.InterfazFecha{
         return fechaSeleccionada;
     }
     
-    public static String calculoFecha(){
-        Calendar fecha = new GregorianCalendar();
-        String mesChoseer = Integer.toString(chIngresarFecha.getCalendar().get(Calendar.MONTH) + 1);
-        String mes = Integer.toString(fecha.get(Calendar.MONTH)+1);
-        
-        String calculoFecha = mes + mesChoseer;
-
-        return calculoFecha;
-        }
+//    public static String calculoFecha(){
+//        
+//        Calendar fecha = new GregorianCalendar();
+//        String año = Integer.toString(fecha.get(Calendar.YEAR));
+//        String mes = Integer.toString(fecha.get(Calendar.MONTH)+1);
+//        String dia = Integer.toString(fecha.get(Calendar.DAY_OF_MONTH));
+//        
+//        String fechaHoyxd1 = dia + mes + año;
+//        
+//        String diaChoseer = Integer.toString(chIngresarFecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+//        String mesChoseer = Integer.toString(chIngresarFecha.getCalendar().get(Calendar.MONTH) + 1);
+//        String anoChoseer = Integer.toString(chIngresarFecha.getCalendar().get(Calendar.YEAR));
+//
+//        String fechaSeleccionadaxd1 = diaChoseer + mesChoseer + anoChoseer;
+//        
+//        short fechaHoyxd, fechaSeleccionadaxd, resultadoFecha;
+//        
+//        fechaHoyxd = (short) Date.parse(fechaHoyxd1);
+//        fechaSeleccionadaxd = (short) Date.parse((fechaSeleccionadaxd1));
+//        
+//        resultadoFecha = (short) ((short) fechaHoyxd - fechaSeleccionadaxd);
+//        
+//        String calculoFecha =String.valueOf(resultadoFecha);
+//        
+//        return calculoFecha;
+//        }
     
 }

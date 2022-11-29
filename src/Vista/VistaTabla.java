@@ -80,4 +80,6 @@ public class VistaTabla extends AbstractTableModel {
                 return null;
         }
     }
+    
+    
 }

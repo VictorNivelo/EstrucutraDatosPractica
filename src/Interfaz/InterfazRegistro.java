@@ -47,13 +47,13 @@ public class InterfazRegistro extends javax.swing.JFrame {
         panelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblUsuarioRegistro.setBackground(new java.awt.Color(255, 255, 255));
-        lblUsuarioRegistro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUsuarioRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuarioRegistro.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblUsuarioRegistro.setForeground(new java.awt.Color(255, 0, 0));
         lblUsuarioRegistro.setText("Nombres");
-        panelRegistro.add(lblUsuarioRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
+        panelRegistro.add(lblUsuarioRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
         txtUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        panelRegistro.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 328, -1));
+        panelRegistro.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 360, -1));
 
         btnAceptarRegistro.setText("ACEPTAR");
         btnAceptarRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +61,7 @@ public class InterfazRegistro extends javax.swing.JFrame {
                 btnAceptarRegistroActionPerformed(evt);
             }
         });
-        panelRegistro.add(btnAceptarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 125, -1));
+        panelRegistro.add(btnAceptarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 110, -1));
 
         btnSalirRegistro.setText("SALIR");
         btnSalirRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +69,7 @@ public class InterfazRegistro extends javax.swing.JFrame {
                 btnSalirRegistroActionPerformed(evt);
             }
         });
-        panelRegistro.add(btnSalirRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 125, -1));
+        panelRegistro.add(btnSalirRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 125, -1));
 
         btnRegresarRegistro.setText("REGRESAR");
         btnRegresarRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -77,15 +77,18 @@ public class InterfazRegistro extends javax.swing.JFrame {
                 btnRegresarRegistroActionPerformed(evt);
             }
         });
-        panelRegistro.add(btnRegresarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 125, -1));
+        panelRegistro.add(btnRegresarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 125, -1));
 
+        lblNombreUsuarioMostrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblNombreUsuarioMostrar.setForeground(new java.awt.Color(0, 0, 255));
         lblNombreUsuarioMostrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelRegistro.add(lblNombreUsuarioMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 320, -1));
+        panelRegistro.add(lblNombreUsuarioMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 20));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("El nombre ingresado es");
-        panelRegistro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 330, -1));
+        panelRegistro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 330, -1));
 
         btnRegistrarNombre.setText("REGISTRAR NOMBRE");
         btnRegistrarNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -93,31 +96,29 @@ public class InterfazRegistro extends javax.swing.JFrame {
                 btnRegistrarNombreActionPerformed(evt);
             }
         });
-        panelRegistro.add(btnRegistrarNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 140, -1));
+        panelRegistro.add(btnRegistrarNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 210, -1));
 
-        FondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FONDOS/FondoRegistroFinal.png"))); // NOI18N
-        panelRegistro.add(FondoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 240));
+        FondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FONDOS/283-personalizar-imagen-wp-login.png"))); // NOI18N
+        panelRegistro.add(FondoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(panelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceptarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarRegistroActionPerformed
-       if(lblNombreUsuarioMostrar.getText().isEmpty()){
-           JOptionPane.showMessageDialog(null, "PORFAVOR INGRESE EL NOMBRE EN EL CAMPO CORRESPONDIENTE", "EROOR", JOptionPane.INFORMATION_MESSAGE);
-       }else{
+        if (lblNombreUsuarioMostrar.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "PORFAVOR INGRESE EL NOMBRE EN EL CAMPO CORRESPONDIENTE", "EROOR", JOptionPane.INFORMATION_MESSAGE);
+        } else {
 //           InterfazPresentacion presentacionInterfaz = new InterfazPresentacion();
 //           presentacionInterfaz.setDatoNombre(lblNombreUsuarioMostrar.getText());
 //           presentacionInterfaz.setVisible(true);
@@ -125,7 +126,7 @@ public class InterfazRegistro extends javax.swing.JFrame {
 
             InterfazPresentacion.lblUsuario.setText(lblNombreUsuarioMostrar.getText());
             this.dispose();
-       }
+        }
 
 //        InterfazFecha abrir = new InterfazFecha();
 //        abrir.setVisible(true);
@@ -133,9 +134,10 @@ public class InterfazRegistro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAceptarRegistroActionPerformed
 
     private void btnRegresarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarRegistroActionPerformed
-        InterfazPrincipal abrir = new InterfazPrincipal();
-        abrir.setVisible(true);
-        this.setVisible(false);
+//        InterfazPrincipal abrir = new InterfazPrincipal();
+//        abrir.setVisible(true);
+//        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnRegresarRegistroActionPerformed
 
     private void btnSalirRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirRegistroActionPerformed
@@ -146,7 +148,7 @@ public class InterfazRegistro extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (txtUsuario.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "NO SE HA INGRESADO EL NOMBRE", "EROOR", JOptionPane.INFORMATION_MESSAGE);
-        }else{
+        } else {
             lblNombreUsuarioMostrar.setText(txtUsuario.getText());
         }
     }//GEN-LAST:event_btnRegistrarNombreActionPerformed

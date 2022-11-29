@@ -9,5 +9,5 @@ package Modelo;
  * @author Victor
  */
 public enum comboTipoProgramador {
-    Seleccionar ,Junior, Senior, Veterano;
+    Seleccionar, Junior, Senior, Veterano;
 }

@@ -51,7 +51,6 @@ public class InterfazFecha extends javax.swing.JFrame {
     private void initComponents() {
 
         panelFechaIngreso = new javax.swing.JPanel();
-        lblIngresarFecha = new javax.swing.JLabel();
         btnAceptarFecha = new javax.swing.JButton();
         btnSalirFecha = new javax.swing.JButton();
         lblFechaSeleccionada = new javax.swing.JLabel();
@@ -63,13 +62,14 @@ public class InterfazFecha extends javax.swing.JFrame {
         lblTiempoTrabajo = new javax.swing.JLabel();
         chIngresarFecha = new com.toedter.calendar.JDateChooser();
         btnCargarTiempoTranajo = new javax.swing.JToggleButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("INGRESAR FECHA");
 
         panelFechaIngreso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        lblIngresarFecha.setText("FECHA DE INGRESO A TRABAJAR");
+        panelFechaIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAceptarFecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/AceptarIconoFinal.png"))); // NOI18N
         btnAceptarFecha.setText("ACEPTAR");
@@ -78,6 +78,7 @@ public class InterfazFecha extends javax.swing.JFrame {
                 btnAceptarFechaActionPerformed(evt);
             }
         });
+        panelFechaIngreso.add(btnAceptarFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, 130, -1));
 
         btnSalirFecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ICONOS/SalirIconoFinal.png"))); // NOI18N
         btnSalirFecha.setText("SALIR");
@@ -86,16 +87,27 @@ public class InterfazFecha extends javax.swing.JFrame {
                 btnSalirFechaActionPerformed(evt);
             }
         });
+        panelFechaIngreso.add(btnSalirFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 140, -1));
 
+        lblFechaSeleccionada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFechaSeleccionada.setForeground(new java.awt.Color(255, 0, 0));
         lblFechaSeleccionada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFechaSeleccionada.setText("Fecha seleccionada");
+        panelFechaIngreso.add(lblFechaSeleccionada, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 160, -1));
 
+        lblFechaSeleccionadaMostrar.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaSeleccionadaMostrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panelFechaIngreso.add(lblFechaSeleccionadaMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 210, 20));
 
+        lblFechaActualTitulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFechaActualTitulo.setForeground(new java.awt.Color(255, 0, 0));
         lblFechaActualTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFechaActualTitulo.setText("Fecha actual");
+        panelFechaIngreso.add(lblFechaActualTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 170, -1));
 
+        lblFechaActualMostrar.setForeground(new java.awt.Color(255, 255, 255));
         lblFechaActualMostrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        panelFechaIngreso.add(lblFechaActualMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 203, 20));
 
         btnRegistrarFechaSeleccionada.setText("REGISTRAR FECHA");
         btnRegistrarFechaSeleccionada.addActionListener(new java.awt.event.ActionListener() {
@@ -103,12 +115,21 @@ public class InterfazFecha extends javax.swing.JFrame {
                 btnRegistrarFechaSeleccionadaActionPerformed(evt);
             }
         });
+        panelFechaIngreso.add(btnRegistrarFechaSeleccionada, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 150, -1));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Tiempo de Trabajo");
+        panelFechaIngreso.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 160, -1));
 
+        lblTiempoTrabajo.setForeground(new java.awt.Color(255, 255, 255));
         lblTiempoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTiempoTrabajo.setText(".");
+        panelFechaIngreso.add(lblTiempoTrabajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 140, 20));
+
+        chIngresarFecha.setDateFormatString("dd MM yyyy");
+        panelFechaIngreso.add(chIngresarFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 210, -1));
 
         btnCargarTiempoTranajo.setText("CALCULAR TIEMPO DE TRABAJO");
         btnCargarTiempoTranajo.addActionListener(new java.awt.event.ActionListener() {
@@ -116,72 +137,27 @@ public class InterfazFecha extends javax.swing.JFrame {
                 btnCargarTiempoTranajoActionPerformed(evt);
             }
         });
+        panelFechaIngreso.add(btnCargarTiempoTranajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, -1, -1));
 
-        javax.swing.GroupLayout panelFechaIngresoLayout = new javax.swing.GroupLayout(panelFechaIngreso);
-        panelFechaIngreso.setLayout(panelFechaIngresoLayout);
-        panelFechaIngresoLayout.setHorizontalGroup(
-            panelFechaIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFechaIngresoLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(panelFechaIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblIngresarFecha)
-                    .addComponent(btnAceptarFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalirFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCargarTiempoTranajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblFechaActualMostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblTiempoTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblFechaActualTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblFechaSeleccionadaMostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblFechaSeleccionada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRegistrarFechaSeleccionada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chIngresarFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
-        );
-        panelFechaIngresoLayout.setVerticalGroup(
-            panelFechaIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFechaIngresoLayout.createSequentialGroup()
-                .addComponent(lblIngresarFecha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chIngresarFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRegistrarFechaSeleccionada)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblFechaSeleccionada)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblFechaSeleccionadaMostrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblFechaActualTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblFechaActualMostrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblTiempoTrabajo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCargarTiempoTranajo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAceptarFecha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSalirFecha)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("INGRESAR FECHA DE TRABAJO");
+        panelFechaIngreso.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FONDOS/FondoCalendario.jpg"))); // NOI18N
+        panelFechaIngreso.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 380, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelFechaIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelFechaIngreso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 356, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelFechaIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelFechaIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -189,7 +165,8 @@ public class InterfazFecha extends javax.swing.JFrame {
 
     private void btnSalirFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirFechaActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        this.dispose();
+//        System.exit(0);
     }//GEN-LAST:event_btnSalirFechaActionPerformed
 
     private void btnAceptarFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarFechaActionPerformed
@@ -230,46 +207,19 @@ public class InterfazFecha extends javax.swing.JFrame {
 
     private void btnCargarTiempoTranajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarTiempoTranajoActionPerformed
         // TODO add your handling code here:
-        lblTiempoTrabajo.setText(UtilidadesFechas.calculoFecha());
+//        short FechaInicio, FechaSelecionada,ResultadoFecha;
+//        
+//        FechaInicio = (short) Date.parse(lblFechaActualMostrar.getText().toString());
+//        FechaSelecionada = (short) Date.parse(lblFechaSeleccionadaMostrar.getText().toString());
+//        
+//        ResultadoFecha = (short) (FechaInicio - FechaSelecionada);
+//        
+//        lblTiempoTrabajo.setText(""+ResultadoFecha);
+//        lblTiempoTrabajo.setText(UtilidadesFechas.calculoFecha());
+        
+        
+//        lblTiempoTrabajo.setText(UtilidadesFechas.calculoFecha());
 
-//        String dateBeforeString = lblFechaSeleccionadaMostrar.getText();
-//	String dateAfterString = lblFechaActualMostrar.getText();
-//		
-//	LocalDate dateBefore = LocalDate.parse(dateBeforeString);
-//	LocalDate dateAfter = LocalDate.parse(dateAfterString);
-//		
-//	//calculating number of days in between
-//        short noOfYearBetween = (short) ChronoUnit.YEARS.between(dateBefore, dateAfter);
-//		
-//	//displaying the number of days
-//	System.out.println(+noOfYearBetween);
-//        
-//        LocalDate dateBefore = LocalDate.parse(dateBeforeString);
-//        LocalDate dateAfter = LocalDate.parse(dateAfterString);
-//        
-//        long noOfDayBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
-//        
-//        System.out.println(noOfDayBetween);
-
-//        String FechaHoy = new SimpleDateFormat("dd/MM/YYYY").format(Date.parse(lblFechaActualMostrar));
-//        String FechaSeleccionada = new SimpleDateFormat("dd/MM/YYYY").format(lblFechaSeleccionadaMostrar);
-//        String[] dateParts = FechaHoy.split("/");
-//        String dia = dateParts[0],
-//                mes = dateParts[1],
-//                año = dateParts[3];
-//        String[] datePartsSelecionado = FechaSeleccionada.split("/");
-//        String diaSelect = datePartsSelecionado[0],
-//                mesSelect = datePartsSelecionado[1],
-//                añoSelect = datePartsSelecionado[2];
-//        
-//        String año_actual = UtilidadesFechas.fechaHoy();
-//        String año_selecionado = UtilidadesFechas.fechaSeleccionada();
-//        
-//        int edad;
-//        
-//        edad = Integer.parseInt(año_actual) - Integer.parseInt(añoSelect);
-//        
-//        lblTiempoTrabajo.setText(""+edad);
     }//GEN-LAST:event_btnCargarTiempoTranajoActionPerformed
 
     /**
@@ -314,11 +264,12 @@ public class InterfazFecha extends javax.swing.JFrame {
     private javax.swing.JButton btnSalirFecha;
     public static com.toedter.calendar.JDateChooser chIngresarFecha;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel lblFechaActualMostrar;
     private javax.swing.JLabel lblFechaActualTitulo;
     private javax.swing.JLabel lblFechaSeleccionada;
     public static javax.swing.JLabel lblFechaSeleccionadaMostrar;
-    private javax.swing.JLabel lblIngresarFecha;
     public static javax.swing.JLabel lblTiempoTrabajo;
     private javax.swing.JPanel panelFechaIngreso;
     // End of variables declaration//GEN-END:variables

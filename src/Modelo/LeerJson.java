@@ -21,7 +21,7 @@ public class LeerJson {
 
         Gson gson = new Gson();
         
-        Union unionJson = new  Union(1, Interfaz.InterfazPresentacion.cbxTipoProgramador.getSelectedItem().toString(), Interfaz.InterfazPresentacion.cbxBonificacion.getSelectedItem().toString(), Interfaz.InterfazPresentacion.txtSueldoProgramador.getText(), Interfaz.InterfazPresentacion.lblAnosTrabajo.getText(), Interfaz.InterfazPresentacion.lblSueldoBonificacion.getText(), Interfaz.InterfazPresentacion.lblUsuario.getText(), Interfaz.InterfazPresentacion.lblFechaIngreso.getText());
+        Union unionJson = new  Union(1, Interfaz.InterfazPresentacion.cbxTipoProgramador.getSelectedItem().toString(), Interfaz.InterfazPresentacion.cbxBonificacion.getSelectedItem().toString(), Interfaz.InterfazPresentacion.txtSueldoProgramador.getText(), Interfaz.InterfazPresentacion.lblBonificacion.getText(), Interfaz.InterfazPresentacion.lblSueldoBonificacion.getText(), Interfaz.InterfazPresentacion.lblUsuario.getText(), Interfaz.InterfazPresentacion.lblFechaIngreso.getText());
 
         String json = gson.toJson(unionJson);
 
